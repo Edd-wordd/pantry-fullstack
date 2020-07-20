@@ -21,17 +21,6 @@ connection.query(selectUser("edward@gmail.com", "replace_me"), (err, res) => {
    }
 });
 
-// function selectUserRecipes(user) {
-//    return `
-//    SELECT
-//       *
-//    FROM
-//       recipes
-//    WHERE
-//       recipes.created_by_user_id = '${user}';
-//    `;
-// }
-
 // connection.query(
 //    selectUserRecipes("8c3ee2c4-d34d-4fe1-a438-e9ea9271c910"),
 //    (error, results) => {

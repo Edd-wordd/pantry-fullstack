@@ -9,9 +9,10 @@ const selectUserRecipes = require("../../queries/selectUserRecipes");
 // @access      Public
 
 router.get("/", (req, res) => {
-   db.query(selectUserRecipes("8c3ee2c4-d34d-4fe1-a438-e9ea9271c910"))
+   console.log(req.query);
+   const { userId } = req.query;
+   db.query(selectUserRecipes(userId))
       .then((dbRes) => {
-         console.log(dbRes);
          res.json(dbRes);
       })
       .catch((err) => {
